@@ -1,0 +1,58 @@
+&grid
+ n_r_max     =81,
+ n_cheb_max  =79,
+ n_phi_tot   =512,
+ n_r_ic_max  =17,
+ n_cheb_ic_max=15,
+ nalias      =20,
+ minc        =1,
+/
+&control
+ mode=0,
+ tag="Pm8E14Ra47q00_p3",
+ n_time_steps=12000000,
+ courfac=3.0,
+ alffac=1.5,
+ dtmax=1.e-5,
+ n_cour_step=5,
+ runHours    =719,	
+ alpha= 0.6
+/
+&phys_param
+ ra=4.0e7,
+ ek=1.e-4,
+ pr=1.,
+ prmag=8.0,
+ radratio=0.350,
+ ktops=2,
+ kbots=1,
+ ktopv=2,
+ kbotv=2,
+ s_top=0   0 -1.000000E+00  0.000000E+00
+/
+&start_field
+ l_start_file=.true.,
+ start_file='checkpoint_end.Pm8E14Ra47q00_p2',
+/
+&output_control
+ l_cmb_field=.true.,
+ n_log_step=100,
+ n_rsts=5,
+ n_graphs=20,
+ l_average=.true.,
+ n_cmb_step=100,
+ n_specs=10,
+ l_earth_likeness=.true.,
+ l_power=.true.,
+ l_2D_RMS=.true.,
+ l_RMS=.true.,
+ /
+&bounds
+/
+&mantle
+/
+&inner_core
+ sigma_ratio=0.0d0,
+ &nRotIC      =0,
+ l_rot_ic=.false.,
+/
